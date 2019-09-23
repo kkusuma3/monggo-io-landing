@@ -9,46 +9,46 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import { makeStyles } from '@material-ui/core/styles';
 import Header from './header';
-// change css to scss
-// import "./layout.css"
 import './layout.scss';
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+const useStyles = makeStyles((theme) => ({
+    container: {
+        padding: '0 50px',
     }
-  `);
+}));
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          ©
-          {' '}
-          {new Date().getFullYear()}
-, Monggo.io
-          {/* {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a> */}
-        </footer>
-      </div>
-    </>
-  );
+const Layout = ({ children }) => {
+    const data = useStaticQuery(graphql`
+        query SiteTitleQuery {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
+        }
+    `);
+    const classes = useStyles();
+
+    return (
+        <>
+            <Header siteTitle={data.site.siteMetadata.title} />
+            <div>
+                <main className={classes.container}>{children}</main>
+                <footer>
+                ©
+                {' '}
+                {new Date().getFullYear()}
+                , Monggo.io
+                </footer>
+            </div>
+        </>
+    );
 };
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 export default Layout;
