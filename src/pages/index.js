@@ -58,15 +58,15 @@ const IndexPage = () => {
                         An App made for <strong>Hotels</strong><br/>So travelers can <strong>worry less and travel more.</strong>
                     </Typography>
                 </Grid>
-                <Grid container direction="row" justify="space-around">
-                    <Grid item xs={12} lg={4}>
+                <Grid container direction="row" justify="space-around" spacing={1}>
+                    <Grid item xs={10} lg={4}>
                         <Link to="/sign-up" className={classes.noUnderline}>
                             <Button fullWidth variant="contained" className={classes.buttonSignUp}>
                                 Sign Up
                             </Button>
                         </Link>
                     </Grid>
-                    <Grid item xs={12} lg={4}>
+                    <Grid item xs={10} lg={4}>
                         <Link to="/monggo-io" className={classes.noUnderline}>
                             <Button fullWidth variant="contained" className={classes.buttonLearnMore}>Learn More</Button>
                         </Link>
