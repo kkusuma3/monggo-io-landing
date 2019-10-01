@@ -8,17 +8,17 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
     card: {
-        minWidth: 250,
+        width: 250,
         borderRadius: 15,
         border: '1px solid #707070',
-        margin: '20px 25px',
+        margin: '40px 60px',
     },
     title: {
-        fontSize: 70,
+        fontSize: 55,
         color: '#C70000',
     },
     description: {
-        fontSize: 20,
+        fontSize: 15,
         textAlign: 'center',
         color: '#C70000'
     },

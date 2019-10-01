@@ -13,11 +13,12 @@ const useStyles = makeStyles((theme) => ({
     imgBackground: {
         background: `url(${WaveSVG}) no-repeat center bottom fixed`,
         width: '100%',
+        height: '90vh'
     },
     textTitle: {
         color: '#C54754',
-        margin: '40px 0',
-    }
+        margin: '20px 0',
+    },
 }));
 
 const MonggoIo = () => {
@@ -31,13 +32,13 @@ const MonggoIo = () => {
                         <Typography variant="h4" className={classes.textTitle}>Redefining Room Service</Typography>
                     </Grid>
                 </Grid>
-                <Grid container xs={12} direction="row">
-                    <Grid item xs={12} md={6} lg={3}>
+                <Grid container xs={12} direction="row" className={classes.gridWrapper}>
+                    <Grid container direction="column" xs={12} md={6} lg={3}>
                         <Grid item xs={6}>
                             <CardWithText title="57%" description="Hotel guests unlikely to return to a hotel when difficult to communicate to staff" />
                         </Grid>
                         <Grid item xs={6}>
-                            <CardWithText title="63%" description="Anxious of traveling due to primary concern of language. barriers." />
+                        <CardWithText title="63%" description="Anxious of traveling due to primary concern of language. barriers." />
                         </Grid>
                     </Grid>
                     <Grid container direction="row" xs={12} md={6}>
@@ -48,7 +49,7 @@ const MonggoIo = () => {
                             <CardWithText title="4" description="Languages supported and counting" />
                         </Grid>
                     </Grid>
-                    <Grid item xs={12} md={6} lg={3}>
+                    <Grid container direction="column" xs={12} md={6} lg={3}>
                         <Grid item xs={6}>
                             <CardWithText title="3" description="Clicks needed on average to make a request" />
                         </Grid>
@@ -56,6 +57,7 @@ const MonggoIo = () => {
                             <CardWithText title="4" description="Languages supported and counting" />
                         </Grid>
                     </Grid>
+                    
                 </Grid>
             </Paper>
         </Layout>
