@@ -4,8 +4,8 @@ import { Typography, Grid } from '@material-ui/core';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import CardAbout from '../components/cardAbout';
-import CardTeam from '../components/cardTeam';
+import CardAbout from '../components/Cards/cardAbout';
+import CardTeam from '../components/Cards/cardTeam';
 import monggoLogo from '../images/logo_transparent.png';
 import ConnectingImage from '../images/problem_solving.png';
 import ComfortImage from '../images/adventure_1.png';

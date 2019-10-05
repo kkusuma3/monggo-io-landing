@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import CardEmail from '../components/cardEmail';
+import CardEmail from '../components/Cards/cardEmail';
 import monggoLogo from '../images/logo_transparent.png';
 import CheckInImage from '../images/img-checkin.jpg';
 

@@ -7,7 +7,7 @@ import { Typography, Grid } from '@material-ui/core';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import WaveSVG from '../images/wave_how_it_works.svg';
-import CardWithText from '../components/cardText';
+import CardWithText from '../components/Cards/cardText';
 
 const useStyles = makeStyles((theme) => ({
     imgBackground: {
