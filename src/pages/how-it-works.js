@@ -5,11 +5,10 @@ import { Typography, Grid } from '@material-ui/core';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import WaveSVG from '../images/wave.svg';
 
 const useStyles = makeStyles((theme) => ({
     imgBackground: {
-        background: `url(${WaveSVG}) no-repeat center top fixed`,
+        background: `url(https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f112046ab06663a64_d20191005_m211302_c000_v0001061_t0036) no-repeat center top fixed`,
         width: '100%',
     },
     textTitle: {

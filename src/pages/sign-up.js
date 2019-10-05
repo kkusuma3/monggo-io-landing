@@ -7,8 +7,6 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import CardEmail from '../components/Cards/cardEmail';
-import monggoLogo from '../images/logo_transparent.png';
-import CheckInImage from '../images/img-checkin.jpg';
 
 const useStyles = makeStyles((theme) => ({
     logo: {
@@ -65,7 +63,7 @@ const MonggoIo = () => {
                     <CardEmail 
                         title="Drop your email below" 
                         description="Greatness takes time. We will notify you about the release date and other updates!"
-                        image={CheckInImage}
+                        image='https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f102e49d2481a2c0d_d20191005_m211244_c000_v0001051_t0052'
                         imageAlt="Person Checking in Hotel"
                     />
                 </Grid>
@@ -73,7 +71,11 @@ const MonggoIo = () => {
             <Grid container xs={12} direction="row" className={classes.gridWrapper}>
                 <Grid container xs={6} lg={3}>
                     <Grid item>
-                        <img src={monggoLogo} alt="Monggo.io Logo" className={classes.logo} />
+                        <img
+                            src='https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f11187b47b0b7579e_d20191005_m211248_c000_v0001028_t0010'
+                            alt="Monggo.io Logo"
+                            className={classes.logo}
+                        />
                     </Grid>
                 </Grid>
                 <Grid container xs={6} lg={3} direction="column">

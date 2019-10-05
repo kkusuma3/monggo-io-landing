@@ -6,11 +6,6 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import CardAbout from '../components/Cards/cardAbout';
 import CardTeam from '../components/Cards/cardTeam';
-import monggoLogo from '../images/logo_transparent.png';
-import ConnectingImage from '../images/problem_solving.png';
-import ComfortImage from '../images/adventure_1.png';
-import ConsistentImage from '../images/city_building_1.png';
-import KevinImage from '../images/img-kevin.jpg';
 
 const useStyles = makeStyles((theme) => ({
     logo: {
@@ -49,26 +44,30 @@ const MonggoIo = () => {
             <Grid container xs={12} direction="column">
                 <Grid container xs={12} justify="center">
                     <Grid item>
-                        <img alt="Monggo.io logo" src={monggoLogo} className={classes.logo} />
+                        <img
+                            alt="Monggo.io logo" 
+                            src='https://f000.backblazeb2.com/file/landing-page/logo_transparent.png'
+                            className={classes.logo} 
+                        />
                     </Grid>
                 </Grid>
                 <Grid container xs={12} justify="center">
                     <CardAbout 
                         title="Connecting the dots" 
                         description="We aim to build a bridge between hotel and customers where deemed necessary to create a pleasant experience for both parties. This includes language translation, online ordering platform and even more coming!"
-                        image={ConnectingImage}
+                        image='https://f000.backblazeb2.com/file/landing-page/problem_solving.png'
                         imageAlt="Connecting puzzles"
                     />
                     <CardAbout 
                         title="Comfort Zone for Customers" 
                         description="As avid travelers ourselves, we know traveling can be problematic when coupled with a language barrier. Therefore, we envision an ecosystem where travelers can travel without fear of miscommunication especially when it comes to accommodations."
-                        image={ComfortImage}
+                        image='https://f000.backblazeb2.com/file/landing-page/adventure_1.png'
                         imageAlt="Adventure seeking"
                     />
                     <CardAbout 
                         title="Consistent Hotel Experience" 
                         description="Our goal is to build a universal platform for hotels around the globe to keep it consistent for you, wherever you go. Going to Europe? Asia? Don’t worry,  you’ll still be able to understand everything. We've got you covered."
-                        image={ConsistentImage}
+                        image='https://f000.backblazeb2.com/file/landing-page/city_building_1.png'
                         imageAlt="City skycrapers"
                     />
                 </Grid>
@@ -83,13 +82,13 @@ const MonggoIo = () => {
                 <CardTeam 
                     name="Gideon Yuwono"
                     jobTitle="Co-Founder/ Tech Lead"
-                    image={KevinImage}
+                    image='https://f000.backblazeb2.com/file/landing-page/img-kevin.jpg'
                     imageAlt="Portrait of Gideon Yuwono"
                 />
                 <CardTeam 
                     name="Kevin Kusuma"
                     jobTitle="Co-Founder/ Tech Lead"
-                    image={KevinImage}
+                    image='https://f000.backblazeb2.com/file/landing-page/img-kevin.jpg'
                     imageAlt="Portrait of Kevin Kusuma"
                     fbLink="https://www.facebook.com/kevindk20"
                     linkedInLink="https://www.linkedin.com/in/kevinkusuma"
@@ -98,7 +97,7 @@ const MonggoIo = () => {
                 <CardTeam 
                     name="Melvin Yuwono"
                     jobTitle="Co-Founder/ Tech Lead"
-                    image={KevinImage}
+                    image='https://f000.backblazeb2.com/file/landing-page/img-kevin.jpg'
                     imageAlt="Portrait of Kevin Kusuma"
                 />
             </Grid>
@@ -106,13 +105,13 @@ const MonggoIo = () => {
                 <CardTeam 
                     name="Yosias Paskal"
                     jobTitle="Software Engineer"
-                    image={KevinImage}
+                    image='https://f000.backblazeb2.com/file/landing-page/img-kevin.jpg'
                     imageAlt="Portrait of Yosias Paskal"
                 />
                 <CardTeam 
                     name="Stefamikha Suwisar"
                     jobTitle="Lead Designer"
-                    image={KevinImage}
+                    image='https://f000.backblazeb2.com/file/landing-page/img-kevin.jpg'
                     imageAlt="Portrait of Stefamikha Suwisar"
                 />
             </Grid>

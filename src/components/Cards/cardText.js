@@ -13,12 +13,16 @@ const useStyles = makeStyles({
         border: '1px solid #707070',
         margin: '40px 60px',
     },
+    cardContent: {
+        height: 250
+    },
     title: {
-        fontSize: 55,
+        fontSize: 65,
         color: '#C70000',
     },
     description: {
-        fontSize: 15,
+        margin: '10px 0',
+        fontSize: 20,
         textAlign: 'center',
         color: '#C70000'
     },
@@ -34,7 +38,7 @@ export default function CardWithText({title, description}) {
 
     return (
         <Card className={classes.card}>
-            <CardContent>
+            <CardContent className={classes.cardContent}>
                 <Grid container xs={12} direction="column" alignItems="center" justify="space-evenly">
                     <Grid item>
                         <Typography variant="h4" className={classes.title}>

@@ -8,14 +8,12 @@ import Button from '@material-ui/core/Button';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const homeBackground = '/images/background.jpg';
-
 const useStyles = makeStyles((theme) => ({
     gridWrapper: {
         padding: '7rem 0 0 3.5rem'
     },
     imgBackground: {
-        background: `url(${homeBackground}) no-repeat center center fixed`,
+        background: `url(https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f1194fd05089b839e_d20191005_m211239_c000_v0001058_t0018) no-repeat center center fixed`,
         backgroundSize: 'cover',
         height: 'calc(100vh - 50px)',
         width: '100%',
