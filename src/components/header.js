@@ -22,11 +22,12 @@ const useStyles = makeStyles((theme) => ({
         color: '#C54754',
         textAlign: 'center',
         cursor: 'pointer',
+        fontSize: 20
     },
     tabUnderline: {
         margin: 'auto',
         borderRadius: 15,
-        borderTop: '5px solid #C54754',
+        borderTop: '3px solid #C54754',
         width: 75,
         transition: '0.5s',
         '&:hover': {
@@ -68,6 +69,7 @@ export default function ButtonAppBar() {
                         <Link to="/how-it-works" className={classes.noUnderline}>
                             <Typography variant="h6" className={classes.tabTitle}>
                                 How it Works
+                                <hr className={classes.tabUnderline} />
                             </Typography>
                         </Link>
                     </Grid>
@@ -75,6 +77,7 @@ export default function ButtonAppBar() {
                         <Link to="/about" className={classes.noUnderline}>
                             <Typography variant="h6" className={classes.tabTitle}>
                                 About Us
+                                <hr className={classes.tabUnderline} />
                             </Typography>
                         </Link>
                     </Grid>
