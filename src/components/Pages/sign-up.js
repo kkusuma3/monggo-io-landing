@@ -4,9 +4,9 @@ import { Typography, Grid } from '@material-ui/core';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import { Link } from 'gatsby';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import CardEmail from '../components/Cards/cardEmail';
+import Layout from '../layout';
+import SEO from '../seo';
+import CardEmail from '../Cards/cardEmail';
 
 const useStyles = makeStyles((theme) => ({
     signUpWrapper: {

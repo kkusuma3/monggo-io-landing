@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid, Paper } from '@material-ui/core';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import CardAbout from '../components/Cards/cardAbout';
-import CardTeam from '../components/Cards/cardTeam';
+import Layout from '../layout';
+import SEO from '../seo';
+import CardAbout from '../Cards/cardAbout';
+import CardTeam from '../Cards/cardTeam';
 
 const useStyles = makeStyles((theme) => ({
     pageWrapper: {

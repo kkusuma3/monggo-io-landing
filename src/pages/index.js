@@ -7,10 +7,10 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import MonggoIO from './monggo-io';
-import HowItWorks from './how-it-works';
-import AboutUs from './about';
-import SignUp from './sign-up';
+import MonggoIO from '../components/Pages/monggo-io';
+import HowItWorks from '../components/Pages/how-it-works';
+import AboutUs from '../components/Pages/about';
+import SignUp from '../components/Pages/sign-up';
 
 const useStyles = makeStyles((theme) => ({
     gridWrapper: {

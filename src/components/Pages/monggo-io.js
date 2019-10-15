@@ -4,9 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { Typography, Grid } from '@material-ui/core';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import CardWithText from '../components/Cards/cardText';
+import SEO from '../seo';
+import CardWithText from '../Cards/cardText';
 import MonggoExperience from './monggo-experience';
 
 const useStyles = makeStyles((theme) => ({

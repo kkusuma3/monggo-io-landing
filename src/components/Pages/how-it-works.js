@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { Typography, Grid } from '@material-ui/core';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../layout';
+import SEO from '../seo';
 
 const useStyles = makeStyles((theme) => ({
     imgBackground: {

@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { Typography, Grid } from '@material-ui/core';
 
-import SEO from '../components/seo';
-import CardExperience from '../components/Cards/cardExperience';
+import SEO from '../seo';
+import CardExperience from '../Cards/cardExperience';
 
 const useStyles = makeStyles(() => ({
     pinkBackground: {
