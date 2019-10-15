@@ -6,7 +6,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import monggoLogo from '../images/logo_transparent.png';
 
 const useStyles = makeStyles((theme) => ({
     homeNavBar: {
@@ -53,7 +52,11 @@ export default function ButtonAppBar() {
             <Grid container alignItems="center">
                 <Grid item xs={6} lg={2}>
                     <Link to="/" className={classes.noUnderline}>
-                        <img alt="Monggo.io logo" src={monggoLogo} className={classes.homeIcon} />
+                        <img
+                            alt="Monggo.io logo"
+                            src='https://f000.backblazeb2.com/file/landing-page/logo_transparent.png'
+                            className={classes.homeIcon}
+                        />
                     </Link>
                 </Grid>
                 <Grid container lg={8} direction="row">

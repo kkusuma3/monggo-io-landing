@@ -9,6 +9,9 @@ import SEO from '../components/seo';
 import CardEmail from '../components/Cards/cardEmail';
 
 const useStyles = makeStyles((theme) => ({
+    signUpWrapper: {
+        padding: '0px 20px'
+    },
     logo: {
         height: 150,
         margin: 20
@@ -30,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '20px 0'
     },
     gridWrapper: {
-        margin: '20px 30px'
+        padding: '20px 30px'
     },
     textFooter: {
         fontSize: 20,
@@ -56,11 +59,12 @@ const useStyles = makeStyles((theme) => ({
 const MonggoIo = () => {
     const classes = useStyles();
     return (
-        <Layout>
+        <>
             <SEO title="Sign Up Page - Drop your Email" />
             <Grid container xs={12} direction="column">
                 <Grid container xs={12} justify="center">
-                    <CardEmail 
+                    <CardEmail
+                        className={classes.signUpWrapper}
                         title="Drop your email below" 
                         description="Greatness takes time. We will notify you about the release date and other updates!"
                         image='https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f102e49d2481a2c0d_d20191005_m211244_c000_v0001051_t0052'
@@ -116,9 +120,8 @@ const MonggoIo = () => {
                         </Link>
                     </Grid>
                 </Grid>
-                
             </Grid>
-        </Layout>
+        </>
     )
 };
 

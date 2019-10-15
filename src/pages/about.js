@@ -1,13 +1,16 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Grid } from '@material-ui/core';
-
+import { Typography, Grid, Paper } from '@material-ui/core';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import CardAbout from '../components/Cards/cardAbout';
 import CardTeam from '../components/Cards/cardTeam';
 
 const useStyles = makeStyles((theme) => ({
+    pageWrapper: {
+        padding: '20px 30px',
+        boxShadow: 'none'
+    },
     logo: {
         height: 150,
         marginBottom: 0,
@@ -33,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 const MonggoIo = () => {
     const classes = useStyles();
     return (
-        <Layout>
+        <Paper className={classes.pageWrapper}>
             <SEO title="About Monggo.io" />
             <Grid container xs={12}>
                 <Grid item>
@@ -115,7 +118,7 @@ const MonggoIo = () => {
                     imageAlt="Portrait of Stefamikha Suwisar"
                 />
             </Grid>
-        </Layout>
+        </Paper>
     )
 };
 

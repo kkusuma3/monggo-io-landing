@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
 const MonggoIo = () => {
     const classes = useStyles();
     return (
-        <Layout>
+        <>
+        {/* <Layout> */}
             <SEO title="Monggo.io - How it Works" />
             <Paper className={classes.imgBackground}>
                 <Grid container xs={12} justify="center">
@@ -32,7 +33,8 @@ const MonggoIo = () => {
                     
                 </Grid>
             </Paper>
-        </Layout>
+        {/* </Layout> */}
+        </>
     )
 };
 

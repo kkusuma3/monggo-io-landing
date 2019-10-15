@@ -9,6 +9,8 @@ import CardExperience from '../components/Cards/cardExperience';
 const useStyles = makeStyles(() => ({
     pinkBackground: {
         backgroundColor: '#FFEBEB',
+        boxShadow: 'none',
+        padding: '20px 50px'
     },
     textTitle: {
         color: '#C54754',
