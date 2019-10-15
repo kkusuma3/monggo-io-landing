@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { Typography, Grid } from '@material-ui/core';
@@ -8,7 +7,7 @@ import SEO from '../seo';
 import CardWithText from '../Cards/cardText';
 import MonggoExperience from './monggo-experience';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     imgBackground: {
         background: `url(https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f112046ab06663a64_d20191005_m211302_c000_v0001061_t0036) no-repeat center bottom`,
         width: '100%',
