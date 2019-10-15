@@ -2,9 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid } from '@material-ui/core';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
-import { Link } from 'gatsby';
+import { Link } from 'react-scroll';
 
-import Layout from '../layout';
 import SEO from '../seo';
 import CardEmail from '../Cards/cardEmail';
 
@@ -40,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#C54754',
         margin: '40px 0 5px 0',
         textAlign: 'center',
+        cursor: 'pointer'
     },
     noUnderline: {
         textDecoration: 'none'
@@ -56,8 +56,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const MonggoIo = () => {
+const MonggoIo = (props) => {
     const classes = useStyles();
+    const { scroll } = props;
     return (
         <>
             <SEO title="Sign Up Page - Drop your Email" />
@@ -75,22 +76,42 @@ const MonggoIo = () => {
             <Grid container xs={12} direction="row" className={classes.gridWrapper}>
                 <Grid container xs={6} lg={3}>
                     <Grid item>
-                        <img
-                            src='https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f11187b47b0b7579e_d20191005_m211248_c000_v0001028_t0010'
-                            alt="Monggo.io Logo"
-                            className={classes.logo}
-                        />
+                        <Link
+                            to="home"
+                            className={classes.noUnderline}
+                            spy={true}
+                            smooth={true}
+                            duration={2000}
+                        >
+                            <img
+                                src='https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f11187b47b0b7579e_d20191005_m211248_c000_v0001028_t0010'
+                                alt="Monggo.io Logo"
+                                className={classes.logo}
+                            />
+                        </Link>
                     </Grid>
                 </Grid>
                 <Grid container xs={6} lg={3} direction="column">
                     <Grid item>
-                        <Link to="/" className={classes.noUnderline}>
+                        <Link
+                            to="monggo-io"
+                            className={classes.noUnderline}
+                            spy={true}
+                            smooth={true}
+                            duration={1000}
+                        >
                             <Typography variant="subtitle2" className={classes.textFooter}>What is Monggo.io?</Typography>
                             <hr className={classes.textUnderline} />
                         </Link>
                     </Grid>
                     <Grid item>
-                        <Link to="/how-it-works" className={classes.noUnderline}>
+                        <Link
+                            to="how-it-works"
+                            className={classes.noUnderline}
+                            spy={true}
+                            smooth={true}
+                            duration={800}
+                        >
                             <Typography variant="subtitle2" className={classes.textFooter}>How it Works</Typography>
                             <hr className={classes.textUnderline} />
                         </Link>
@@ -98,13 +119,25 @@ const MonggoIo = () => {
                 </Grid>
                 <Grid container xs={6} lg={3} direction="column">
                     <Grid item>
-                        <Link to="/about-us" className={classes.noUnderline}>
+                        <Link
+                            to="about"
+                            className={classes.noUnderline}
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >
                             <Typography variant="subtitle2" className={classes.textFooter}>About Us</Typography>
                             <hr className={classes.textUnderline} />
                         </Link>
                     </Grid>
                     <Grid item>
-                        <Link to="/sign-up" className={classes.noUnderline}>
+                        <Link
+                            to="sign-up"
+                            className={classes.noUnderline}
+                            spy={true}
+                            smooth={true}
+                            duration={200}
+                        >
                             <Typography variant="subtitle2" className={classes.textFooter}>Sign Up</Typography>
                             <hr className={classes.textUnderline} />
                         </Link>
@@ -112,12 +145,14 @@ const MonggoIo = () => {
                 </Grid>
                 <Grid container xs={6} lg={3} direction="column" justify="center">
                     <Grid item>
-                        <Link to="/" className={classes.noUnderline}>
-                            <Typography variant="subtitle2" className={classes.textFooter}>
-                                Back to Top
-                                <ArrowUpwardIcon />
-                            </Typography>
-                        </Link>
+                        <Typography
+                            variant="subtitle2"
+                            className={classes.textFooter}
+                            onClick={scroll}
+                        >
+                            Back to Top
+                            <ArrowUpwardIcon />
+                        </Typography>
                     </Grid>
                 </Grid>
             </Grid>

@@ -29,7 +29,6 @@ const MonggoIo = () => {
     const classes = useStyles();
     return (
         <>
-        {/* <Layout> */}
             <SEO title="Monggo.io - Redefining Room Service" />
             <Paper className={classes.imgBackground}>
                 <Grid container xs={12} justify="center">
@@ -74,7 +73,6 @@ const MonggoIo = () => {
                 </Grid>
             </Paper>
             <MonggoExperience />
-        {/* </Layout> */}
         </>
     )
 };

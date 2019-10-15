@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import MonggoIO from '../components/Pages/monggo-io';
@@ -49,37 +49,62 @@ const useStyles = makeStyles((theme) => ({
 
 const IndexPage = () => {
   const classes = useStyles();
+
+  const scrollToTop = () => scroll.scrollToTop();
+
   return (
     <Layout>
-        <SEO title="Home" />
-        <Paper className={classes.imgBackground}>
-            <Grid container xs={12} lg={7} direction="column" alignItems="center" className={classes.gridWrapper}>
-                <Grid item>
-                    <Typography variant="h2" className={classes.textHeading}>Opening your room to<br/>a world of possibilities</Typography>
-                    <Typography variant="subtitle1" className={classes.textSubheading}>
-                        An App made for <strong>Hotels</strong><br/>So travelers can <strong>worry less and travel more.</strong>
-                    </Typography>
-                </Grid>
-                <Grid container direction="row" justify="space-around" spacing={1}>
-                    <Grid item xs={10} lg={4}>
-                        <Link to="/sign-up" className={classes.noUnderline}>
-                            <Button fullWidth variant="contained" className={classes.buttonSignUp}>
-                                Sign Up
-                            </Button>
-                        </Link>
+        <Element name="home">
+            <SEO title="Home" />
+            <Paper className={classes.imgBackground}>
+                <Grid container xs={12} lg={7} direction="column" alignItems="center" className={classes.gridWrapper}>
+                    <Grid item>
+                        <Typography variant="h2" className={classes.textHeading}>Opening your room to<br/>a world of possibilities</Typography>
+                        <Typography variant="subtitle1" className={classes.textSubheading}>
+                            An App made for <strong>Hotels</strong><br/>So travelers can <strong>worry less and travel more.</strong>
+                        </Typography>
                     </Grid>
-                    <Grid item xs={10} lg={4}>
-                        <Link to="/monggo-io" className={classes.noUnderline}>
-                            <Button fullWidth variant="contained" className={classes.buttonLearnMore}>Learn More</Button>
-                        </Link>
+                    <Grid container direction="row" justify="space-around" spacing={1}>
+                        <Grid item xs={10} lg={4}>
+                            <Link
+                                to="sign-up"
+                                className={classes.noUnderline}
+                                spy={true}
+                                smooth={true}
+                                duration={3000}
+                            >
+                                <Button fullWidth variant="contained" className={classes.buttonSignUp}>
+                                    Sign Up
+                                </Button>
+                            </Link>
+                        </Grid>
+                        <Grid item xs={10} lg={4}>
+                            <Link
+                                to="monggo-io"
+                                className={classes.noUnderline}
+                                spy={true}
+                                smooth={true}
+                                duration={600}
+                            >
+                                <Button fullWidth variant="contained" className={classes.buttonLearnMore}>Learn More</Button>
+                            </Link>
+                        </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
-        </Paper>
-        <MonggoIO />
-        {/* <HowItWorks /> */}
-        <AboutUs />
-        <SignUp />
+            </Paper>
+        </Element>
+        <Element name="monggo-io">
+            <MonggoIO />
+        </Element>
+        <Element name="how-it-works">
+            {/* <HowItWorks /> */}
+        </Element>
+        <Element name="about">
+            <AboutUs />
+        </Element>
+        <Element name="sign-up">
+            <SignUp scroll={scrollToTop} />
+        </Element>
     </Layout>
   );
 };

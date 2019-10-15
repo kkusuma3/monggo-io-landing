@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'react-scroll';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -51,7 +51,13 @@ export default function ButtonAppBar() {
         <Toolbar>
             <Grid container alignItems="center">
                 <Grid item xs={6} lg={2}>
-                    <Link to="/" className={classes.noUnderline}>
+                    <Link
+                        to="home"
+                        className={classes.noUnderline}
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                    >
                         <img
                             alt="Monggo.io logo"
                             src='https://f000.backblazeb2.com/file/landing-page/logo_transparent.png'
@@ -61,7 +67,13 @@ export default function ButtonAppBar() {
                 </Grid>
                 <Grid container lg={8} direction="row">
                     <Grid item lg={4}>
-                        <Link to="/monggo-io" className={classes.noUnderline}>
+                        <Link
+                            to="monggo-io"
+                            className={classes.noUnderline}
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >
                             <Typography variant="h6" className={classes.tabTitle}>
                                 What is Monggo.io?
                                 <hr className={classes.tabUnderline} />
@@ -69,7 +81,13 @@ export default function ButtonAppBar() {
                         </Link>
                     </Grid>
                     <Grid item lg={4}>
-                        <Link to="/how-it-works" className={classes.noUnderline}>
+                        <Link
+                            to="how-it-works"
+                            className={classes.noUnderline}
+                            spy={true}
+                            smooth={true}
+                            duration={700}
+                        >
                             <Typography variant="h6" className={classes.tabTitle}>
                                 How it Works
                                 <hr className={classes.tabUnderline} />
@@ -77,7 +95,13 @@ export default function ButtonAppBar() {
                         </Link>
                     </Grid>
                     <Grid item lg={4}>
-                        <Link to="/about" className={classes.noUnderline}>
+                        <Link
+                            to="about"
+                            className={classes.noUnderline}
+                            spy={true}
+                            smooth={true}
+                            duration={900}
+                        >
                             <Typography variant="h6" className={classes.tabTitle}>
                                 About Us
                                 <hr className={classes.tabUnderline} />
@@ -86,7 +110,13 @@ export default function ButtonAppBar() {
                     </Grid>
                 </Grid>
                 <Grid item xs={6} lg={2}>
-                    <Link to="/sign-up" className={classes.noUnderline}>
+                    <Link
+                        to="sign-up"
+                        className={classes.noUnderline}
+                        spy={true}
+                        smooth={true}
+                        duration={2000}
+                    >
                         <Button fullWidth variant="contained" className={classes.buttonSignUp}>Sign Up</Button>
                     </Link>
                 </Grid>
