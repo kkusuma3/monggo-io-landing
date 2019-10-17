@@ -12,7 +12,9 @@ import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles({
     cardImage: {
-        maxWidth: 300,
+        objectFit: 'cover',
+        width: 300,
+        height: 300,
         marginBottom: 0,
     },
     card: {

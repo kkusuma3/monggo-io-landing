@@ -97,7 +97,7 @@ const IndexPage = () => {
             <MonggoIO />
         </Element>
         <Element name="how-it-works">
-            {/* <HowItWorks /> */}
+            <HowItWorks />
         </Element>
         <Element name="about">
             <AboutUs />
