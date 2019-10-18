@@ -8,16 +8,20 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
     card: {
+        width: 250,
         borderRadius: 15,
-        border: '1px solid #C70000',
-        margin: '20px 25px',
-
+        border: '1px solid #707070',
+        margin: '40px 60px',
+    },
+    cardContent: {
+        height: 250
     },
     title: {
-        fontSize: 70,
+        fontSize: 65,
         color: '#C70000',
     },
     description: {
+        margin: '10px 0',
         fontSize: 20,
         textAlign: 'center',
         color: '#C70000'
@@ -27,27 +31,19 @@ const useStyles = makeStyles({
         borderRadius: 15,
         borderTop: '5px solid #C54754',
     },
-    titleUnderline: {
-        margin: 'auto',
-        width: 150,
-        marginTop: 40,
-        marginBottom: 0,
-        borderTop: '2px solid #C54754',
-    }
 });
 
-export default function CardWithText({title, description, image}) {
+export default function CardWithText({title, description}) {
     const classes = useStyles();
 
     return (
         <Card className={classes.card}>
-            <CardContent>
-                <Grid container xs={12} direction="column">
+            <CardContent className={classes.cardContent}>
+                <Grid container xs={12} direction="column" alignItems="center" justify="space-evenly">
                     <Grid item>
                         <Typography variant="h4" className={classes.title}>
                             {title}
                         </Typography>
-                        <hr className={classes.titleUnderline}></hr>
                     </Grid>
                     <Grid item>
                         <Typography variant="h6" className={classes.description}>
@@ -56,6 +52,7 @@ export default function CardWithText({title, description, image}) {
                     </Grid>
                 </Grid>
             </CardContent>
+            <hr className={classes.cardUnderline}/>
         </Card>
     );
 }

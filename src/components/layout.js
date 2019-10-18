@@ -15,7 +15,7 @@ import './layout.scss';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        padding: '0 50px',
+        
     }
 }));
 
