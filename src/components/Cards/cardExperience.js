@@ -41,7 +41,7 @@ export default function CardExperience({title, description, image, imageAlt}) {
     const classes = useStyles();
 
     return (
-        <Grid item xs={6} lg={3}>
+        <Grid item xs={12} md={6} lg={3}>
             <Card className={classes.card}>
             <hr className={classes.cardUnderline} />
                 <Grid container direction="column">

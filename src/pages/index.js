@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Link, Element, animateScroll as scroll } from 'react-scroll';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import MonggoIO from '../components/Pages/monggo-io';
@@ -14,12 +14,11 @@ import SignUp from '../components/Pages/sign-up';
 
 const useStyles = makeStyles((theme) => ({
     gridWrapper: {
-        padding: '7rem 0 0 3.5rem'
+        padding: '25vh 0 25vh 2rem'
     },
     imgBackground: {
         background: `url(https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f1194fd05089b839e_d20191005_m211239_c000_v0001058_t0018) no-repeat center center`,
         backgroundSize: 'cover',
-        height: 'calc(100vh - 50px)',
         width: '100%',
     },
     buttonSignUp: {
@@ -36,11 +35,12 @@ const useStyles = makeStyles((theme) => ({
     textHeading: {
         color: '#C54754',
         marginBottom: 20,
+        fontSize: '3.8rem'
     },
     textSubheading: {
         color: 'rgba(30, 74, 110, 0.9)',
         marginBottom: 20,
-        fontSize: 30
+        fontSize: '1.5rem'
     },
     noUnderline: {
         textDecoration: 'none'
@@ -57,7 +57,7 @@ const IndexPage = () => {
         <Element name="home">
             <SEO title="Home" />
             <Paper className={classes.imgBackground}>
-                <Grid container xs={12} lg={7} direction="column" alignItems="center" className={classes.gridWrapper}>
+                <Grid container xs={12} md={10} lg={7} direction="column" alignItems="center" className={classes.gridWrapper}>
                     <Grid item>
                         <Typography variant="h2" className={classes.textHeading}>Opening your room to<br/>a world of possibilities</Typography>
                         <Typography variant="subtitle1" className={classes.textSubheading}>
@@ -65,7 +65,7 @@ const IndexPage = () => {
                         </Typography>
                     </Grid>
                     <Grid container direction="row" justify="space-around" spacing={1}>
-                        <Grid item xs={10} lg={4}>
+                        <Grid item xs={10} md={5} lg={4}>
                             <Link
                                 to="sign-up"
                                 className={classes.noUnderline}
@@ -78,7 +78,7 @@ const IndexPage = () => {
                                 </Button>
                             </Link>
                         </Grid>
-                        <Grid item xs={10} lg={4}>
+                        <Grid item xs={10} md={5} lg={4}>
                             <Link
                                 to="monggo-io"
                                 className={classes.noUnderline}

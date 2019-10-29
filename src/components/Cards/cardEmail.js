@@ -6,10 +6,12 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { TextField, Button } from '@material-ui/core';
+import Hidden from '@material-ui/core/Hidden';
+
 
 const useStyles = makeStyles({
     gridWrapper: {
-        margin: '50px 0 0 50px'
+        padding: '1.5rem 0 0 1.5rem'
     },
     card: {
         border: '1px solid #C70000',
@@ -51,7 +53,7 @@ export default function CardEmail({title, description, image, imageAlt}) {
     return (
         <Card className={classes.card}>
             <Grid container xs={12} className={classes.gridWrapper}>
-                <Grid item xs={8}>
+                <Grid item xs={12} md={8}>
                     <CardContent>
                         <Grid container xs={10} direction="column">
                             <Grid item>
@@ -88,9 +90,11 @@ export default function CardEmail({title, description, image, imageAlt}) {
                         </Grid>
                     </CardContent>
                 </Grid>
-                <Grid item xs={3}>
-                    <img src={image} alt={imageAlt}  className={classes.imgHotel}/>
-                </Grid>
+                <Hidden smDown>
+                    <Grid item md={4}>
+                        <img src={image} alt={imageAlt}  className={classes.imgHotel}/>
+                    </Grid>
+                </Hidden>
             </Grid>
         </Card>
     );

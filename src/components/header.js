@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
     homeNavBar: {
@@ -65,60 +66,58 @@ export default function ButtonAppBar() {
                         />
                     </Link>
                 </Grid>
-                <Grid container lg={8} direction="row">
-                    <Grid item lg={4}>
-                        <Link
-                            to="monggo-io"
-                            className={classes.noUnderline}
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                        >
-                            <Typography variant="h6" className={classes.tabTitle}>
-                                What is Monggo.io?
-                                <hr className={classes.tabUnderline} />
-                            </Typography>
-                        </Link>
+                <Hidden mdDown>
+                    <Grid container lg={8} direction="row">
+                        <Grid item lg={4}>
+                            <Link
+                                to="monggo-io"
+                                className={classes.noUnderline}
+                                spy={true}
+                                smooth={true}
+                                duration={500}
+                            >
+                                <Typography variant="h6" className={classes.tabTitle}>
+                                    What is Monggo.io?
+                                    <hr className={classes.tabUnderline} />
+                                </Typography>
+                            </Link>
+                        </Grid>
+                        <Grid item lg={4}>
+                            <Link
+                                to="how-it-works"
+                                className={classes.noUnderline}
+                                spy={true}
+                                smooth={true}
+                                duration={700}
+                            >
+                                <Typography variant="h6" className={classes.tabTitle}>
+                                    How it Works
+                                    <hr className={classes.tabUnderline} />
+                                </Typography>
+                            </Link>
+                        </Grid>
+                        <Grid item lg={4}>
+                            <Link
+                                to="about"
+                                className={classes.noUnderline}
+                                spy={true}
+                                smooth={true}
+                                duration={900}
+                            >
+                                <Typography variant="h6" className={classes.tabTitle}>
+                                    About Us
+                                    <hr className={classes.tabUnderline} />
+                                </Typography>
+                            </Link>
+                        </Grid>
                     </Grid>
-                    <Grid item lg={4}>
-                        <Link
-                            to="how-it-works"
-                            className={classes.noUnderline}
-                            spy={true}
-                            smooth={true}
-                            duration={700}
-                        >
-                            <Typography variant="h6" className={classes.tabTitle}>
-                                How it Works
-                                <hr className={classes.tabUnderline} />
-                            </Typography>
-                        </Link>
-                    </Grid>
-                    <Grid item lg={4}>
-                        <Link
-                            to="about"
-                            className={classes.noUnderline}
-                            spy={true}
-                            smooth={true}
-                            duration={900}
-                        >
-                            <Typography variant="h6" className={classes.tabTitle}>
-                                About Us
-                                <hr className={classes.tabUnderline} />
-                            </Typography>
-                        </Link>
-                    </Grid>
-                </Grid>
+                </Hidden>
                 <Grid item xs={6} lg={2}>
-                    <Link
-                        to="sign-up"
-                        className={classes.noUnderline}
-                        spy={true}
-                        smooth={true}
-                        duration={2000}
-                    >
-                        <Button fullWidth variant="contained" className={classes.buttonSignUp}>Sign Up</Button>
-                    </Link>
+                    <a href="https://monggo.io" target="_blank" className={classes.noUnderline}>
+                        <Button fullWidth variant="contained" className={classes.buttonSignUp}>
+                            Go to App
+                        </Button>
+                    </a>
                 </Grid>
             </Grid>
         </Toolbar>

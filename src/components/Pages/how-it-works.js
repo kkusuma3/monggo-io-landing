@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
     },
     imgDesc: {
         width: 'inherit',
-        height: 250,
+        height: 'inherit',
         margin: '40px 0'
     },
     textTitle: {
