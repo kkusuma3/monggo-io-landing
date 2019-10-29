@@ -5,9 +5,19 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { TextField, Button } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import Snackbar from '@material-ui/core/Snackbar';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 import Hidden from '@material-ui/core/Hidden';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
+
+function encode(data) {
+    return Object.keys(data)
+        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+}
 
 const useStyles = makeStyles({
     gridWrapper: {
@@ -32,6 +42,10 @@ const useStyles = makeStyles({
     textFieldEmail: {
         borderRadius: 10,
         backgroundColor: 'white',
+        width: '100%',
+        height: '100%',
+        fontFamily: 'Roboto',
+        padding: 10
     },
     buttonSignUp: {
         borderRadius: 10,
@@ -41,13 +55,34 @@ const useStyles = makeStyles({
     },
     imgHotel: {
         height: 250
+    },
+    snackbar: {
+        backgroundColor: 'green',
+    },
+    snackbarContent: {
+        display: 'flex',
+        alignItems: 'center',
     }
 });
 
 export default function CardEmail({title, description, image, imageAlt}) {
     const classes = useStyles();
     const [email, setEmail] = useState('');
+    const [open, setOpen] = React.useState(false);
 
+    // Snackbar
+    const handleClick = () => {
+        setOpen(true);
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setOpen(false);
+    };
+    
+    // Netlify forms
     const handleChange = () => event => setEmail(event.target.value);
 
     const handleSubmit = (e) => {
@@ -61,7 +96,7 @@ export default function CardEmail({title, description, image, imageAlt}) {
                 ...email,
             }),
         })
-          .then(() => (console.log('success')))
+          .then(() => (handleClick()))
           .catch((error) => alert(error))
     }
 
@@ -81,40 +116,37 @@ export default function CardEmail({title, description, image, imageAlt}) {
                                     {description}
                                 </Typography>
                             </Grid>
-                            <Grid container xs={12} direction="row" spacing={4}>
-                                <Grid item xs={12} md={8}>
-                                    <form
-                                        name="email"
-                                        method="post"
-                                        data-netlify-honeypot="bot-field"
-                                        data-netlify="true"
-                                        onSubmit={handleSubmit}
-                                        // action=""
-                                    >
-                                        <input type="text" name="email" onChange={handleChange} />
+                            <form
+                                name="email"
+                                method="post"
+                                data-netlify-honeypot="bot-field"
+                                data-netlify="true"
+                                onSubmit={handleSubmit}
+                            >
+                                <Grid container xs={12} direction="row" spacing={4}>
+                                    <Grid item xs={12} md={8}>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            onChange={handleChange} 
+                                            className={classes.textFieldEmail}
+                                            placeholder="example@email.com"
+                                        />
                                         <input type="hidden" name="form-name" value="email" />
                                         <input type="hidden" name="bot-field" />
-                                    </form>
-                                    {/* <TextField
-                                        placeholder="example@email.com"
-                                        value={email}
-                                        variant="outlined"
-                                        onChange={handleChange()}
-                                        className={classes.textFieldEmail}
-                                        fullWidth="true"
-                                    /> */}
+                                    </Grid>
+                                    <Grid item xs={12} md={4}>
+                                        <Button
+                                            variant="contained"
+                                            className={classes.buttonSignUp}
+                                            fullWidth="true"
+                                            type="submit"
+                                        >
+                                            Sign Up
+                                        </Button>
+                                    </Grid>
                                 </Grid>
-                                <Grid item xs={12} md={4}>
-                                    <Button
-                                        variant="contained"
-                                        className={classes.buttonSignUp}
-                                        fullWidth="true"
-                                        type="submit"
-                                    >
-                                        Sign Up
-                                    </Button>
-                                </Grid>
-                            </Grid>
+                            </form>
                         </Grid>
                     </CardContent>
                 </Grid>
@@ -124,6 +156,38 @@ export default function CardEmail({title, description, image, imageAlt}) {
                     </Grid>
                 </Hidden>
             </Grid>
+            <Snackbar
+                className={classes.snackbar}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'right',
+                }}
+                open={open}
+                autoHideDuration={6000}
+                onClose={handleClose}
+                ContentProps={{
+                    'aria-describedby': 'message-id',
+                }}
+                message={
+                    <>
+                        <span id="message-id" className={classes.snackbarContent}>
+                            <CheckCircleIcon />
+                            &nbsp; Thanks for signing up. We will be emailing you soon!
+                        </span>
+                    </>
+                }
+                action={
+                    <IconButton
+                        key="close"
+                        aria-label="close"
+                        color="inherit"
+                        className={classes.close}
+                        onClick={handleClose}
+                    >
+                        <CloseIcon />
+                    </IconButton>
+                }
+            />
         </Card>
     );
 }
