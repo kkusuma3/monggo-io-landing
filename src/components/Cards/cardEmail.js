@@ -50,6 +50,21 @@ export default function CardEmail({title, description, image, imageAlt}) {
 
     const handleChange = () => event => setEmail(event.target.value);
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const form = e.target
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({
+                'form-name': form.getAttribute('email'),
+                ...email,
+            }),
+        })
+          .then(() => (console.log('success')))
+          .catch((error) => alert(error))
+    }
+
     return (
         <Card className={classes.card}>
             <Grid container xs={12} className={classes.gridWrapper}>
@@ -68,20 +83,33 @@ export default function CardEmail({title, description, image, imageAlt}) {
                             </Grid>
                             <Grid container xs={12} direction="row" spacing={4}>
                                 <Grid item xs={12} md={8}>
-                                    <TextField
+                                    <form
+                                        name="email"
+                                        method="post"
+                                        data-netlify-honeypot="bot-field"
+                                        data-netlify="true"
+                                        onSubmit={handleSubmit}
+                                        // action=""
+                                    >
+                                        <input type="text" name="email" onChange={handleChange} />
+                                        <input type="hidden" name="form-name" value="email" />
+                                        <input type="hidden" name="bot-field" />
+                                    </form>
+                                    {/* <TextField
                                         placeholder="example@email.com"
                                         value={email}
                                         variant="outlined"
                                         onChange={handleChange()}
                                         className={classes.textFieldEmail}
                                         fullWidth="true"
-                                    />
+                                    /> */}
                                 </Grid>
                                 <Grid item xs={12} md={4}>
                                     <Button
                                         variant="contained"
                                         className={classes.buttonSignUp}
                                         fullWidth="true"
+                                        type="submit"
                                     >
                                         Sign Up
                                     </Button>
