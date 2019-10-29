@@ -10,7 +10,7 @@ import MonggoExperience from './monggo-experience';
 const useStyles = makeStyles(() => ({
     imgBackground: {
         background: `url(https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f112046ab06663a64_d20191005_m211302_c000_v0001061_t0036) no-repeat center bottom`,
-        width: '100%',
+        width: '100vw',
         height: '90%',
         padding: '30px 30px'
     },
@@ -22,6 +22,9 @@ const useStyles = makeStyles(() => ({
         color: '#C54754',
         margin: '30px 0',
     },
+    center: {
+        margin: 'auto'
+    }
 }));
 
 const MonggoIo = () => {
@@ -30,17 +33,17 @@ const MonggoIo = () => {
         <>
             <SEO title="Monggo.io - Redefining Room Service" />
             <Paper className={classes.imgBackground}>
-                <Grid container direction="row" justify="center" className={classes.gridWrapper}>
+                <Grid container direction="row" justify="center" className={classes.center}>
                     <Grid container xs={12} justify="center">
                         <Grid item>
                             <Typography variant="h4" className={classes.textTitle}>Redefining Room Service</Typography>
                         </Grid>
                     </Grid>
-                    <Grid container direction="column" xs={12} md={6} lg={3}>
-                        <Grid item md={6}>
+                    <Grid container direction="column" xs={12} md={6} lg={3} className={classes.center}>
+                        <Grid item className={classes.center}>
                             <CardWithText title="57%" description="Hotel guests unlikely to return to a hotel when difficult to communicate to staff" />
                         </Grid>
-                        <Grid item md={6}>
+                        <Grid item className={classes.center}>
                             <CardWithText title="63%" description="Anxious of traveling due to primary concern of language. barriers." />
                         </Grid>
                     </Grid>
@@ -60,11 +63,11 @@ const MonggoIo = () => {
                             />
                         </Grid>
                     </Grid>
-                    <Grid container direction="column" xs={12} md={6} lg={3}>
-                        <Grid item md={6}>
+                    <Grid container direction="column" xs={12} md={6} lg={3} className={classes.center}>
+                        <Grid item className={classes.center}>
                             <CardWithText title="3" description="Clicks needed on average to make a request" />
                         </Grid>
-                        <Grid item md={6}>
+                        <Grid item className={classes.center}>
                             <CardWithText title="4" description="Languages supported and counting" />
                         </Grid>
                     </Grid>     
