@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid } from '@material-ui/core';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import { Link } from 'react-scroll';
+import Hidden from '@material-ui/core/Hidden';
 
 import SEO from '../seo';
 import CardEmail from '../Cards/cardEmail';
@@ -65,7 +66,6 @@ const MonggoIo = (props) => {
             <Grid container xs={12} direction="column">
                 <Grid container xs={12} justify="center">
                     <CardEmail
-                        className={classes.signUpWrapper}
                         title="Drop your email below" 
                         description="Greatness takes time. We will notify you about the release date and other updates!"
                         image='https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f102e49d2481a2c0d_d20191005_m211244_c000_v0001051_t0052'
@@ -74,7 +74,7 @@ const MonggoIo = (props) => {
                 </Grid>
             </Grid>
             <Grid container xs={12} direction="row" className={classes.gridWrapper}>
-                <Grid container xs={6} lg={3}>
+                <Grid container xs={6} md={3}>
                     <Grid item>
                         <Link
                             to="home"
@@ -91,33 +91,34 @@ const MonggoIo = (props) => {
                         </Link>
                     </Grid>
                 </Grid>
-                <Grid container xs={6} lg={3} direction="column">
-                    <Grid item>
-                        <Link
-                            to="monggo-io"
-                            className={classes.noUnderline}
-                            spy={true}
-                            smooth={true}
-                            duration={1000}
-                        >
-                            <Typography variant="subtitle2" className={classes.textFooter}>What is Monggo.io?</Typography>
-                            <hr className={classes.textUnderline} />
-                        </Link>
+                <Hidden smDown>
+                    <Grid container xs={6} md={3} direction="column">
+                        <Grid item>
+                            <Link
+                                to="monggo-io"
+                                className={classes.noUnderline}
+                                spy={true}
+                                smooth={true}
+                                duration={1000}
+                            >
+                                <Typography variant="subtitle2" className={classes.textFooter}>What is Monggo.io?</Typography>
+                                <hr className={classes.textUnderline} />
+                            </Link>
+                        </Grid>
+                        <Grid item>
+                            <Link
+                                to="how-it-works"
+                                className={classes.noUnderline}
+                                spy={true}
+                                smooth={true}
+                                duration={800}
+                            >
+                                <Typography variant="subtitle2" className={classes.textFooter}>How it Works</Typography>
+                                <hr className={classes.textUnderline} />
+                            </Link>
+                        </Grid>
                     </Grid>
-                    <Grid item>
-                        <Link
-                            to="how-it-works"
-                            className={classes.noUnderline}
-                            spy={true}
-                            smooth={true}
-                            duration={800}
-                        >
-                            <Typography variant="subtitle2" className={classes.textFooter}>How it Works</Typography>
-                            <hr className={classes.textUnderline} />
-                        </Link>
-                    </Grid>
-                </Grid>
-                <Grid container xs={6} lg={3} direction="column">
+                    <Grid container xs={6} md={3} direction="column">
                     <Grid item>
                         <Link
                             to="about"
@@ -143,7 +144,8 @@ const MonggoIo = (props) => {
                         </Link>
                     </Grid>
                 </Grid>
-                <Grid container xs={6} lg={3} direction="column" justify="center">
+                </Hidden>
+                <Grid container xs={6} md={3} direction="column" justify="center">
                     <Grid item>
                         <Typography
                             variant="subtitle2"

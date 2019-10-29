@@ -11,7 +11,7 @@ const useStyles = makeStyles({
         width: 250,
         borderRadius: 15,
         border: '1px solid #707070',
-        margin: '40px 60px',
+        margin: '2rem 1.5rem',
     },
     cardContent: {
         height: 250

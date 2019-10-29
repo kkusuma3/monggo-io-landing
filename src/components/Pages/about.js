@@ -84,7 +84,7 @@ const MonggoIo = () => {
             <Grid container direction="row" xs={12} justify="space-around" spacing={4} className={classes.cardTeamWrapper}>
                 <CardTeam 
                     name="Gideon Yuwono"
-                    jobTitle="Co-Founder/ Tech Lead"
+                    jobTitle="Co-Founder/ Product"
                     image='https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f10749101a93d2dd4_d20191017_m030212_c000_v0001057_t0035'
                     imageAlt="Portrait of Gideon Yuwono"
                     fbLink="www.facebook.com/gideonyuwono"
@@ -93,7 +93,7 @@ const MonggoIo = () => {
                 />
                 <CardTeam 
                     name="Kevin Kusuma"
-                    jobTitle="Co-Founder/ Tech Lead"
+                    jobTitle="Co-Founder/ Engineering"
                     image='https://f000.backblazeb2.com/file/landing-page/img-kevin.jpg'
                     imageAlt="Portrait of Kevin Kusuma"
                     fbLink="https://www.facebook.com/kevindk20"
@@ -102,7 +102,7 @@ const MonggoIo = () => {
                 />
                 <CardTeam 
                     name="Melvin Yuwono"
-                    jobTitle="Co-Founder/ Tech Lead"
+                    jobTitle="Co-Founder/ Business"
                     image='https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f115e57342d567a04_d20191017_m030215_c000_v0001057_t0008'
                     imageAlt="Portrait of Melvin Yuwono"
                     fbLink="https://www.facebook.com/melvin.a.yuwono"
@@ -118,16 +118,16 @@ const MonggoIo = () => {
                     imageAlt="Portrait of Yosias Paskal"
                     fbLink="https://www.facebook.com/YosiasSapari"
                     linkedInLink="https://www.linkedin.com/in/yosias-p-pascal-sapari-30207169/"
-                    emailLink="mailto:melvinyuwono@gmail.com"
+                    emailLink="mailto:yosiassapari@gmail.com"
                 />
                 <CardTeam 
                     name="Stefamikha Suwisar"
                     jobTitle="Lead Designer"
-                    image='https://f000.backblazeb2.com/file/landing-page/img-kevin.jpg'
+                    image='https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f10467b9e8deae094_d20191018_m145943_c000_v0001027_t0000'
                     imageAlt="Portrait of Stefamikha Suwisar"
-                    fbLink="www.facebook.com/melvin.a.yuwono"
-                    linkedInLink="https://www.linkedin.com/in/melvinjuwono/"
-                    emailLink="mailto:melvinyuwono@gmail.com"
+                    fbLink="https://www.facebook.com/stefamikha.suwisar"
+                    linkedInLink="https://www.linkedin.com/in/stefamikha-suwisar-947051150/"
+                    emailLink="mailto:stefamikha.sws@gmail.com"
                 />
             </Grid>
         </Paper>

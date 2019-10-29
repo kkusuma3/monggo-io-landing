@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     pinkBackground: {
         backgroundColor: '#FFEBEB',
         boxShadow: 'none',
-        padding: '20px 50px'
+        padding: '1.3rem 2rem'
     },
     textTitle: {
         color: '#C54754',
@@ -53,7 +53,7 @@ const MonggoIo = () => {
                     />
                     <CardExperience
                         title="Connected"
-                        description="Stay connected throughout and avoid miscommunication. Everything is translated from your language to the hotel you are staying at."
+                        description="Everything is connected from your mobile phone to the hotel operators in your own languages."
                         image='https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f101d3b8962a8e4a5_d20191005_m211249_c000_v0001061_t0045'
                         imageAlt="Computer connected to other networks"
                     />

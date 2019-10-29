@@ -61,17 +61,17 @@ export default function CardTeam({name, jobTitle, image, imageAlt, fbLink, linke
                                 </Typography>
                             </Grid>
                             <Grid container xs={12} direction="row" justify="space-around" className={classes.gridSocialWrapper}>
-                                <Grid item xs={12} md={6} lg={3}>
+                                <Grid item xs={4} lg={3}>
                                     <Link href={fbLink} color="inherit">
                                         <FacebookIcon fontSize="large" className={classes.socialIcons}/>
                                     </Link>
                                 </Grid>
-                                <Grid item xs={12} md={6} lg={3}>
+                                <Grid item xs={4} lg={3}>
                                     <Link href={linkedInLink} color="inherit">
                                         <LinkedInIcon fontSize="large" className={classes.socialIcons}/>
                                     </Link>
                                 </Grid>
-                                <Grid item xs={12} md={6} lg={3}>
+                                <Grid item xs={4} lg={3}>
                                     <Link href={emailLink} color="inherit">
                                         <EmailIcon fontSize="large" className={classes.socialIcons}/>
                                     </Link>
