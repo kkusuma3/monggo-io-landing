@@ -16,7 +16,7 @@ const img_qrcode = 'https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id
 const useStyles = makeStyles(() => ({
     imgBackground: {
         background: `url(https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f1108668de7dc2810_d20191017_m023646_c000_v0001057_t0014) no-repeat center top`,
-        width: '100%',
+        backgroundSize: '100%',
         boxShadow: 'none',
         padding: '40px 0'
     },

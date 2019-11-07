@@ -9,7 +9,7 @@ import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles({
     cardWrapper: {
-        padding: '1.5rem 2rem'
+        padding: '1.5rem'
     },
     innerWrapper: {
         padding: '1.5rem 2rem'

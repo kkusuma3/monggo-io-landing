@@ -14,7 +14,10 @@ import SignUp from '../components/Pages/sign-up';
 
 const useStyles = makeStyles((theme) => ({
     gridWrapper: {
-        padding: '25vh 0 25vh 2rem'
+        padding: '25vh 0 25vh 2rem',
+        [theme.breakpoints.up('md')]: {
+            marginLeft: '1rem'
+         },  
     },
     imgBackground: {
         background: `url(https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z836a231ac24c9edf65db051c_f1194fd05089b839e_d20191005_m211239_c000_v0001058_t0018) no-repeat center center`,
@@ -35,12 +38,18 @@ const useStyles = makeStyles((theme) => ({
     textHeading: {
         color: '#C54754',
         marginBottom: 20,
-        fontSize: '3.8rem'
+        [theme.breakpoints.down('md')]: {
+           fontSize: '2.7rem' 
+        },
+        fontSize: '4rem'
     },
     textSubheading: {
         color: 'rgba(30, 74, 110, 0.9)',
         marginBottom: 20,
-        fontSize: '1.5rem'
+        [theme.breakpoints.down('md')]: {
+            fontSize: '1.2rem' 
+         },
+        fontSize: '1.7rem'
     },
     noUnderline: {
         textDecoration: 'none'
@@ -64,7 +73,7 @@ const IndexPage = () => {
                             An App made for <strong>Hotels</strong><br/>So travelers can <strong>worry less and travel more.</strong>
                         </Typography>
                     </Grid>
-                    <Grid container direction="row" justify="space-around" spacing={1}>
+                    <Grid container direction="row" justify="space-evenly" spacing={1}>
                         <Grid item xs={10} md={5} lg={4}>
                             <Link
                                 to="sign-up"

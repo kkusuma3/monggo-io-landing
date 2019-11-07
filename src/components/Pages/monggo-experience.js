@@ -32,7 +32,7 @@ const MonggoIo = () => {
                         <Typography variant="h4" className={classes.textTitle}>Empowering Hotel Experience</Typography>
                     </Grid>
                 </Grid>
-                <Grid container xs={12} direction="row" className={classes.gridWrapper} spacing={6}>
+                <Grid container xs={12} direction="row" className={classes.gridWrapper} spacing={2}>
                     <CardExperience
                         title="Anywhere"
                         description="Make room requests from anywhere. Need to get your room done before you get back? Now, you can!"

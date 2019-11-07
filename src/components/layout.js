@@ -14,8 +14,8 @@ import Header from './header';
 import './layout.scss';
 
 const useStyles = makeStyles((theme) => ({
-    container: {
-        
+    fullWidth: {
+        width: '100%'
     }
 }));
 
@@ -32,10 +32,10 @@ const Layout = ({ children }) => {
     const classes = useStyles();
 
     return (
-        <>
+        <div className={classes.fullWidth}>
             <Header siteTitle={data.site.siteMetadata.title} />
             <div>
-                <main className={classes.container}>{children}</main>
+                <main>{children}</main>
                 <footer>
                 ©
                 {' '}
@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
                 , Monggo.io
                 </footer>
             </div>
-        </>
+        </div>
     );
 };
 

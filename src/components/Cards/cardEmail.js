@@ -21,13 +21,12 @@ function encode(data) {
 
 const useStyles = makeStyles({
     gridWrapper: {
-        padding: '1.5rem 0 0 1.5rem'
+        padding: '1.5rem 0 0 4.5rem'
     },
     card: {
         border: '1px solid #C70000',
         width: '100%',
         backgroundColor: '#C70000',
-        margin: '40px 0'
     },
     title: {
         fontSize: 35,
@@ -54,7 +53,8 @@ const useStyles = makeStyles({
         height: 60
     },
     imgHotel: {
-        height: 250
+        height: 'inherit',
+        margin: 0
     },
     snackbar: {
         backgroundColor: 'green',

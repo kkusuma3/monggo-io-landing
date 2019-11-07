@@ -17,13 +17,13 @@ const useStyles = makeStyles({
         height: 250,
         maxWidth: 200,
         marginBottom: 0,
-        margin: 20
+        margin: '1em auto 1em auto'
     },
     card: {
         height: 500,
         borderRadius: 15,
         border: '1px solid #C70000',
-        margin: 15
+        margin: '1.4rem'
     },
     title: {
         fontSize: 25,
